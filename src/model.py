@@ -13,15 +13,14 @@ def create_sequence (data,seq_length,forecast_len):
 
 def model_lstm(X,y,seq_length,num_features,forecast_length,st):
   
-    if st:
-         with st.spinner("Traning model"):
-            model=Sequential()
-            model.add(LSTM(128,input_shape=(seq_length,num_features)))
+    if st: 
+        model=Sequential()
+        model.add(LSTM(128,input_shape=(seq_length,num_features)))
 
-            model.add(Dense(forecast_length* num_features))
-            model.add(Reshape((forecast_length,num_features)))
-            model.compile(optimizer='adam',loss='mse')
-            model.fit(
+        model.add(Dense(forecast_length* num_features))
+        model.add(Reshape((forecast_length,num_features)))
+        model.compile(optimizer='adam',loss='mse')
+        model.fit(
                     X,y,
                     epochs=5,
                     batch_size=32,

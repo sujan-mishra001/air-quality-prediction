@@ -6,8 +6,8 @@ This project predicts air quality using historical data from the OpenWeather API
 
 - Fetches air pollution data for a given latitude and longitude.
 - Preprocesses and normalizes data for model training.
-- Trains an LSTM neural network to forecast air quality metrics.
-- Displays historical and forecasted air quality in an interactive dashboard.
+- Trains an LSTM model to forecast air quality metrics.
+- Displays historical and forecasted air quality in an interactive dashboard with visualization .
 
 ## Requirements
 
